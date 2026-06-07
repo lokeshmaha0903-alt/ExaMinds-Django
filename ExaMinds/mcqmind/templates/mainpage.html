@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExaMinds</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <div class="header">
+        <h1>The Exam Portal</h1>
+        <h3>Your Gateway to Exam Preparation</h3>
+    </div>
+
+    <div class="popup">{{msg}}</div>
+    
+    <form>
+        <center>
+            <input class="btn1" type="submit" value="👨‍💼Admin" formaction="/loginadminpage/">
+            <input class="btn2" type="submit" value="🎓Student" formaction="/loginuserpage/">
+        </center>
+    </form>
+    
+    <div class="text">
+        <p>⚡ Prepare for Python, Django, SQL, HTML, CSS exams.</p>
+    </div>
+
+    <div class="subjects">
+        <div class="card">🐍 Python</div>
+        <div class="card">⚙️ Django</div>
+        <div class="card">🗄️ SQL</div>
+        <div class="card">🌐 HTML & CSS</div>
+    </div>
+
+    <footer>
+        <p>© 2026 ExaMinds | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

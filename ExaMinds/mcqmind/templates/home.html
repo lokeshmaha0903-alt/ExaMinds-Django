@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <nav class="navbar bg-body-tertiary">
+        <form class="container-fluid justify-content-start">
+            <button class="btn btn-outline-success me-2" type="button"><a href="/registerpage/" style="text-decoration: none;color: green;">Registration</a></button>
+            <!-- <button class="btn btn-outline-success me-2" type="button"><a href="/loginuserpage/" style="text-decoration: none;color: green;">Login User</a></button> -->
+            <button class="btn btn-outline-success me-2" type="button"><a href="/cruduserpage/" style="text-decoration: none;color: green;">User Crud</a></button>
+            <button class="btn btn-outline-success me-2" type="button"><a href="/showuserresults/" style="text-decoration: none;color: green;">Show Results</a></button>
+            <button class="btn btn-outline-success me-2" type="button" style="margin-left: 1060px;"><a href="/logoutuser/" style="text-decoration: none;color: green;">Logout</a></button>
+        </form>
+    </nav>
+    <br>
+    <div class="ms-3 mt-3">
+    <h2>Welcome, <span class="text-success">{{request.session.username}}</span> </h2>
+    <p class="text-muted" style="max-width: 600px;">
+        <strong>ExaMinds</strong> is an online exam platform where you can test your knowledge 
+        across topics like Python, HTML, CSS, SQL, Django, and Maths. 
+        Attempt quizzes, track your progress, and sharpen your skills — all in one place.
+    </p>
+    </div>
+    <br>
+
+
+    
+
+    <div class="d-flex gap-3 mt-5 ms-3">
+
+        <!-- Button trigger modal -->
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pythonmodal">Launch Python Test</button>
+
+     <!-- Modal -->
+        <div class="modal fade" id="pythonmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">ExaMinds Test</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Ready to start the Python test?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="/starttest/?subject=Python"class="btn btn-primary text-white fw-bold"style="text-decoration: none;">Start</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#djangomodal">Launch Django Test</button>
+
+     <!-- Modal -->
+        <div class="modal fade" id="djangomodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">ExaMinds Test</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Ready to start the Django test?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="/showallUSer"class="btn btn-primary text-white fw-bold"style="text-decoration: none;">Start</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sqlmodal">Launch SQL Test</button>
+
+     <!-- Modal -->
+        <div class="modal fade" id="sqlmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">ExaMinds Test</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Ready to start the SQL test?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="/showallUSer"class="btn btn-primary text-white fw-bold"style="text-decoration: none;">Start</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#htmlmodal">Launch HTML Test</button>
+
+     <!-- Modal -->
+        <div class="modal fade" id="htmlmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">ExaMinds Test</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Ready to start the HTML test?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="/showallUSer"class="btn btn-primary text-white fw-bold"style="text-decoration: none;">Start</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mathsmodal">Launch Maths Test</button>
+
+     <!-- Modal -->
+        <div class="modal fade" id="mathsmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">ExaMinds Test</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Ready to start the Maths test?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="/starttest/?subject=Maths"class="btn btn-primary text-white fw-bold"style="text-decoration: none;">Start</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+
+
+
+    </div>
+    
+</body>
+</html>

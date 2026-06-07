@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <header>
+            <div>
+                <span> {{username}} </span>
+            </div>
+            <hr>
+            <span>{{msg}}</span>
+
+            <!-- <div>
+                <span>
+                    Questions {{question.qid}}
+                </span>
+            </div> -->
+        </header>
+    </div>
+
+    <main>
+        <form>
+
+            <input type="hidden" name="qid" value="{{question.qid}}">
+            <input type="hidden" name="qtext" value="{{question.qtext}}">
+            <input type="hidden" name="answer" value="{{question.correct_answer}}">
+            <input type="hidden" name="subject" value="{{question.subject}}">
+
+            <div>
+                <h4>{{question.qid}}</h4>
+                <p>{{question.qtext}}</p>
+
+                <input type="hidden" name="subject" value="{{question.subject}}">
+
+
+                <div>
+                <inputtype="radio" 
+                    name="user_ans" value="{{question.qoption1}}">
+                <label>
+                    {{question.qoption1}}
+                </label>
+            </div>
+
+            <div>
+                <inputtype="radio" 
+                    name="user_ans" value="{{question.qoption2}}">
+                <label>
+                    {{question.qoption2}}
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input type="radio" 
+                    name="user_ans" value="{{question.qoption3}}">
+                <label class="form-check-label">
+                    {{question.qoption3}}
+                </label>
+            </div>
+
+            <div>
+                <input type="radio" 
+                    name="user_ans" value="{{question.qoption4}}">
+                <label>
+                    {{question.qoption4}}
+                </label>
+            </div>
+
+    
+
+                <div>
+                    <button type="submit" formaction="/previousquestion/">Previous</button>
+                    <button type="submit" formaction="/nextquestion/">Next</button>
+                    <button type="submit" formaction="/endtest">End Test</button>
+                </div>
+            </div>
+
+        </form>
+    </main>
+</body>
+</html>

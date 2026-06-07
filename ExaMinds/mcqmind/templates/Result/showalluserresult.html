@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar bg-body-tertiary">
+        <form class="container-fluid justify-content-start">
+            <button class="btn btn-outline-success me-2" type="button"><a href="/homepage/" style="text-decoration: none;color: green;">Home</a></button>
+            <button class="btn btn-outline-success me-2" type="button" style="margin-left: 1350px;"><a href="/logoutuser/" style="text-decoration: none;color: green;">Logout</a></button>
+        </form>
+    </nav>
+
+    <h1 style="text-align: center; margin-top: 30px;"><caption>Test Score</caption></h1>
+    <table class="table table-striped" style="width: 70%; margin-left: 14%;">
+
+        <thead>
+            <tr>
+                
+                <th scope="col">Username</th>
+                <th scope="col">Subject</th>
+                <th scope="col">User Ans</th>
+                <th scope="col">Correct Ans</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in response %}
+            <tr>
+
+                
+                <td>{{user.0}}</td>
+                <td>{{user.1}}</td>
+                <td>{{user.2}}</td>
+                <td>{{user.3}}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="4"><center>Final Score: {{finalscore}}</center></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

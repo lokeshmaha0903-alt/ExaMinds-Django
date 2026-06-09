@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 import pymysql
 pymysql.install_as_MySQLdb
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -87,13 +89,15 @@ DATABASES = {
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "examinds",
-        "USER": 'root',
-        "PASSWORD": 'Your_Paaword',
-        "HOST": 'localhost',
-        "PORT": 3306
+        "NAME": os.environ.get("DB_NAME", "examinds"),
+        "USER": os.environ.get("DB_USER", "root"),
+        "PASSWORD": os.environ.get("DB_PASSWORD", ""),
+        "HOST": os.environ.get("DB_HOST", "localhost"),
+        "PORT": os.environ.get("DB_PORT", "3306"),
     }
 }
+
+
 
 
 # Password validation

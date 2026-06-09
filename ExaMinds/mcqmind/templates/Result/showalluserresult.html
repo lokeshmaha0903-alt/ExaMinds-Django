@@ -17,8 +17,8 @@
 
     <nav class="navbar bg-body-tertiary">
         <form class="container-fluid justify-content-start">
-            <button class="btn btn-outline-success me-2" type="button"><a href="/homepage/" style="text-decoration: none;color: green;">Home</a></button>
-            <button class="btn btn-outline-success me-2" type="button" style="margin-left: 1350px;"><a href="/logoutuser/" style="text-decoration: none;color: green;">Logout</a></button>
+            <button class="btn btn-outline-success me-2" type="button"><a href="/adminpage/" style="text-decoration: none;color: green;">🏠Admin Page</a></button>
+            <button class="btn btn-outline-success me-2" type="button" style="margin-left: 1250px;"><a href="/logoutuser/" style="text-decoration: none;color: green;">Logout</a></button>
         </form>
     </nav>
 
@@ -28,21 +28,17 @@
         <thead>
             <tr>
                 
-                <th scope="col">Username</th>
-                <th scope="col">Subject</th>
-                <th scope="col">User Ans</th>
-                <th scope="col">Correct Ans</th>
+                <th>Username</th>
+                <th>Subject</th>
+                <th>Score</th>
             </tr>
         </thead>
         <tbody>
-            {% for user in response %}
+            {% for user in userdb %}
             <tr>
-
-                
-                <td>{{user.0}}</td>
-                <td>{{user.1}}</td>
-                <td>{{user.2}}</td>
-                <td>{{user.3}}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.subject }}</td>
+                <td>{{ user.score }}</td>
             </tr>
             {% endfor %}
             <tr>

@@ -33,6 +33,9 @@ class Student_Info(models.Model):
     password = models.CharField(max_length=300)
     mobile_no = models.BigIntegerField()
 
+    def __str__(self):
+        return self.username
+
     class Meta:
         db_table = 'students'
 

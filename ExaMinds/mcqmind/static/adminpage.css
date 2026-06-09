@@ -1,0 +1,46 @@
+.btn1{
+    height: 200px;
+    width: 500px;
+    margin-top:150px;
+    margin-left: 100px;
+    border-radius: 20px;
+    padding: 50px;
+    font-weight: 700;
+    font-size:x-large;
+    background-color: beige;
+}
+
+.btn1:hover{
+    background-color: red;
+}
+
+.btn2{
+    margin-left: 340px;
+    height: 200px;
+    width: 500px;
+    border-radius: 20px;
+    padding: 50px;
+    font-weight: 700;
+    font-size:x-large;
+    background-color: beige;
+}
+
+.btn2:hover{
+    background-color: red;
+}
+
+.btn3{
+    margin-top: 20px;
+    margin-left: 520px;
+    height: 200px;
+    width: 500px;
+    border-radius: 20px;
+    padding: 50px;
+    font-weight: 700;
+    font-size:x-large;
+    background-color: beige;
+}
+
+.btn3:hover{
+    background-color: red;
+}

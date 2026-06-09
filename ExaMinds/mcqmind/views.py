@@ -297,6 +297,7 @@ def LogoutUser(request):
     logout(request)
     return render(request, 'mainpage.html')
 
+##*************** Test **************##
 
 def StartTest(request):
     sub = request.GET['subject']
@@ -389,6 +390,8 @@ def EndTest(request):
 
     return render(request, 'result/scorecard.html', {'response': response, 'finalscore': finalscore})
 
+##*********************Admin *********************##
+
 def LoginAdmin(request):
     aduname = request.POST['adminname']
     adpsw = request.POST['adminpassword']
@@ -428,3 +431,14 @@ def ShowUserResult(request):
    results = Result.objects.filter(username = userdb)
 
    return render(request, 'Students/showuserresult.html', {'results': results})
+
+
+
+def QuesOp(request):
+    return render(request, 'Admin/questionsoperation.html')
+
+def StudOp(request):
+    return render(request, 'Admin/studentoperation.html')
+
+def ResultOp(request):
+    return render(request, 'Admin/resultop.html')

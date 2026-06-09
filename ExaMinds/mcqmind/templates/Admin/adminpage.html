@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +11,10 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'adminpage.css' %}">
 </head>
 <body>
-    <nav class="navbar bg-body-tertiary">
+    <!-- <nav class="navbar bg-body-tertiary">
         <form class="container-fluid justify-content-start">
             <button class="btn btn-outline-success me-2" type="button"><a href="/homepage" style="text-decoration: none;color: green;">Home Page</a></button>
             <button class="btn btn-outline-success me-2" type="button"><a href="/addquestionpage/" style="text-decoration: none;color: green;">Add Questions</a></button>
@@ -27,9 +29,20 @@
             <button class="btn btn-outline-success me-2" type="button"><a href="/showalluserresult/" style="text-decoration: none;color: green;">All User Result</a></button>
             <button class="btn btn-outline-success me-2" type="button" style="margin-left: 100px;"><a href="/logoutadmin/" style="text-decoration: none;color: green;">Logout</a></button>
         </form>
-    </nav>   
+    </nav>    -->
     
 
-    <h1>Hello {{request.session.adminname |default:"Not Found" }}</h1>
+    <h1>👋 Welcome Back, {{request.session.adminname |default:"Not Found" }}</h1>
+    <h3>Manage questions, students, and test results from one place.</h3>
+
+
+    
+        <form>
+            <input class="btn1" type="submit" value="❓Questions Operations" formaction="/quesop/">
+            <input class="btn2" type="submit" value="🎓Student Operations" formaction="/studop/">
+            <input class="btn3" type="submit" value="🏆Results" formaction="/resultop">
+        </form>
+
+    
 </body>
 </html>

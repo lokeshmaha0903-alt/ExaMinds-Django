@@ -44,4 +44,7 @@ urlpatterns = [
     path('logoutadmin/', views.LogoutAdmin),
     path('loginadmin/', views.LoginAdmin),
     path('showuserresults/', views.ShowUserResult),
+    path('quesop/', views.QuesOp),
+    path('studop/', views.StudOp),
+    path('resultop/', views.ResultOp),
 ]

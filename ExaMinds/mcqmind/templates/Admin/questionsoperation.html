@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'questionsoperations.css' %}">
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <form class="container-fluid justify-content-start">
+            <button class="btn btn-outline-success me-2" type="button"><a href="/adminpage" style="text-decoration: none;color: green;">🏠Admin Page</a></button>
+            <button class="btn btn-outline-success me-2" type="button"><a href="/addquestionpage/" style="text-decoration: none;color: green;">➕Add Questions</a></button>
+            <button class="btn btn-outline-success me-2" type="button"><a href="/updatequespage/" style="text-decoration: none;color: green;">✏️Update Questions</a></button>
+            <button class="btn btn-outline-success me-2" type="button" style="margin-top: 10px;"><a href="/crudQuespage/" style="text-decoration: none;color: green;">📝 Manage Questions</a></button>
+            <!-- <button class="btn btn-outline-success me-2" type="button"><a href="/registerpage/" style="text-decoration: none;color: green;">Add User</a></button>
+            <button class="btn btn-outline-success me-2" type="button"><a href="/loginuserpage/" style="text-decoration: none;color: green;">Login User</a></button>
+            <button class="btn btn-outline-success me-2" type="button"><a href="/deleteuserpage/" style="text-decoration: none;color: green;">Delete User</a></button>
+             <button class="btn btn-outline-success me-2" type="button"><a href="/cruduserpage/" style="text-decoration: none;color: green;">User Crud</a></button> -->
+            <button class="btn btn-outline-success me-2" type="button" style="margin-top: 10px;"><a href="/showallquestions/" style="text-decoration: none;color: green;">📚All Questions</a></button>
+            <!-- <button class="btn btn-outline-success me-2" type="button"><a href="/showallUSer/" style="text-decoration: none;color: green;">All User</a></button>
+            <button class="btn btn-outline-success me-2" type="button"><a href="/showalluserresult/" style="text-decoration: none;color: green;">All User Result</a></button>-->
+            <button class="btn btn-outline-success me-2" type="button" style="margin-left: 1400px; margin-top: -1100px; height: 50px; width: 100px; font-weight: 800; font-size: medium;"><a href="/logoutadmin/" style="text-decoration: none;color: green;">Logout</a></button> 
+        </form>
+    </nav>
+</body>
+</html>

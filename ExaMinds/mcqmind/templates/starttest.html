@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'test.css' %}">
 </head>
 <body>
     <div>
@@ -14,16 +16,16 @@
             <hr>
             <span>{{msg}}</span>
 
-            <!-- <div>
+            <div>
                 <span>
                     Questions {{question.qid}}
                 </span>
-            </div> -->
+            </div>
         </header>
     </div>
 
     <main>
-        <form>
+        <form class="card">
 
             <input type="hidden" name="qid" value="{{question.qid}}">
             <input type="hidden" name="qtext" value="{{question.qtext}}">
@@ -37,44 +39,43 @@
                 <input type="hidden" name="subject" value="{{question.subject}}">
 
 
-                <div>
-                <inputtype="radio" 
-                    name="user_ans" value="{{question.qoption1}}">
-                <label>
-                    {{question.qoption1}}
+            <div>
+                
+                <label class="option">
+                    <input class="first" type="radio" name="user_ans" value="{{question.qoption1}}">
+                    <span>{{question.qoption1}}</span>
+                </label>
+            </div>
+
+            <div >
+                <label class="option">
+                    <input class="second" type="radio" name="user_ans" value="{{question.qoption2}}">
+                    <span>{{question.qoption2}}</span>
                 </label>
             </div>
 
             <div>
-                <inputtype="radio" 
-                    name="user_ans" value="{{question.qoption2}}">
-                <label>
-                    {{question.qoption2}}
-                </label>
-            </div>
-
-            <div class="form-check">
-                <input type="radio" 
-                    name="user_ans" value="{{question.qoption3}}">
-                <label class="form-check-label">
-                    {{question.qoption3}}
+                
+                <label class="option">
+                    <input class="third" type="radio" name="user_ans" value="{{question.qoption3}}">
+                    <span>{{question.qoption3}}</span>
                 </label>
             </div>
 
             <div>
-                <input type="radio" 
-                    name="user_ans" value="{{question.qoption4}}">
-                <label>
-                    {{question.qoption4}}
+                
+                <label class="option">
+                    <input  class="fourth" type="radio" name="user_ans" value="{{question.qoption4}}">
+                    <span>{{question.qoption4}}</span>
                 </label>
             </div>
 
     
 
                 <div>
-                    <button type="submit" formaction="/previousquestion/">Previous</button>
-                    <button type="submit" formaction="/nextquestion/">Next</button>
-                    <button type="submit" formaction="/endtest">End Test</button>
+                    <button class="previous" type="submit" formaction="/previousquestion/">Previous</button>
+                    <button class="next" type="submit" formaction="/nextquestion/">Next</button>
+                    <button class="end" type="submit" formaction="/endtest">End Test</button>
                 </div>
             </div>
 

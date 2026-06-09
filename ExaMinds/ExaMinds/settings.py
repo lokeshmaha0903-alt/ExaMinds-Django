@@ -25,7 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = "django-insecure-zi(h59+xjv7ebxv_io!qk(t!yf%%eo!pl=9o+reli0v)(chrjf"
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -60,7 +61,7 @@ ROOT_URLCONF = "ExaMinds.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, 'templates')],
+        "DIRS": [os.path.join(BASE_DIR, '/templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -79,17 +80,27 @@ WSGI_APPLICATION = "ExaMinds.wsgi.application"
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": os.environ.get("DB_NAME", "examinds"),
+#         "USER": os.environ.get("DB_USER", "root"),
+#         "PASSWORD": os.environ.get("DB_PASSWORD", ""),
+#         "HOST": os.environ.get("DB_HOST", "localhost"),
+#         "PORT": os.environ.get("DB_PORT", "3306"),
+#     }
+# }
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": os.environ.get("DB_NAME", "examinds"),
-        "USER": os.environ.get("DB_USER", "root"),
-        "PASSWORD": os.environ.get("DB_PASSWORD", ""),
-        "HOST": os.environ.get("DB_HOST", "localhost"),
-        "PORT": os.environ.get("DB_PORT", "3306"),
+        "NAME": "examinds",
+        "USER": 'root',
+        "PASSWORD": 'Lokesh@9356629872',
+        "HOST": 'localhost',
+        "PORT": 3306
     }
 }
-
 
 
 

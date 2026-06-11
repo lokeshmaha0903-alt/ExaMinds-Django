@@ -45,7 +45,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -71,8 +70,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "ExaMinds.wsgi.application"
-
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
@@ -94,7 +91,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "examinds",
         "USER": "root",
-        "PASSWORD": "Password",
+        "PASSWORD": "Lokesh@9356629872",
         "HOST": "localhost",
         "PORT": 3306,
     }

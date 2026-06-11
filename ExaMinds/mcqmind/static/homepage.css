@@ -1,0 +1,23 @@
+.head{
+    text-align: center;
+    font-weight: 700;
+}
+
+.coursebtn{
+    margin-top: 40px;    
+}
+
+.coursebtn button{
+    margin-left: 60px;
+    height: 100px;
+    width: 300px;
+    padding: 30px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: large;
+    background-color: rgb(191, 236, 236);
+}
+
+.coursebtn button:hover{
+    background-color:#f43b97;
+}
